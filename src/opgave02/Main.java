@@ -10,8 +10,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Storage storage = initStorage();
+        storage.printMovies();
+        storage.printSeries();
     }
-
     private static Storage initStorage() {
         Storage storage = new Storage();
         Director georgeLukas = new Director("George Walton Lucas Jr.", LocalDate.of(1944, 5, 14));
@@ -46,9 +47,6 @@ public class Main {
         TVSerie friends = new TVSerie("Friends", 11,
                 new Genre[]{Genre.COMEDY, Genre.ROMANCE},
                 new ArrayList<>(List.of(aniston, cox, kudrow, leBlanc, perry, schwimmer)));
-        storage.addMovie(starWars);
-        storage.addMovie(indy);
-        storage.addTVSerie(friends);
         return storage;
     }
 }

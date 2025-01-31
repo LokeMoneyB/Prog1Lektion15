@@ -22,4 +22,14 @@ public class Storage {
     public void addTVSerie(TVSerie serie) {
         series.add(serie);
     }
+    public void printMovies(){
+        for (Movie movie : movies) {
+            System.out.println(movie);
+        }
+    }
+    public void printSeries(){
+        for (TVSerie tvSerie : series) {
+            System.out.println(tvSerie);
+        }
+    }
 }

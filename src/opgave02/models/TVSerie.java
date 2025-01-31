@@ -1,17 +1,20 @@
 package opgave02.models;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
-public class TVSerie {
-    private String title;
+public class TVSerie extends Media{
     private int numberOfSeasons;
-    private Genre[] genres;
-    private ArrayList<Actor> cast;
 
     public TVSerie(String title, int numberOfSeasons, Genre[] genres, ArrayList<Actor> cast) {
-        this.title = title;
+        super(title,genres,cast);
         this.numberOfSeasons = numberOfSeasons;
-        this.genres = genres;
-        this.cast = cast;
+    }
+
+    @Override
+    public String toString() {
+        return "TVSerie{" +
+                ", numberOfSeasons=" + numberOfSeasons +
+                '}';
     }
 }
